@@ -1,7 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:nepaltradingysytem/Pages/Calculator.dart';
+import 'package:nepaltradingysytem/Pages/Contact.dart';
+import 'package:nepaltradingysytem/Pages/GraphStudy.dart';
+import 'package:nepaltradingysytem/Pages/Minerals.dart';
+import 'package:nepaltradingysytem/Pages/PredictedGraph.dart';
+import 'package:nepaltradingysytem/Pages/Price.dart';
+import 'package:nepaltradingysytem/Pages/StockGraph.dart';
+import 'package:nepaltradingysytem/Pages/WatchList.dart';
 
 import 'Login.dart';
 import 'Profile.dart';
+import 'StockAlert.dart';
+import 'StockPrice.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -154,11 +164,72 @@ class HomePage extends StatelessWidget {
               );
             },
           );
-        } else  {
+        } else if (title == 'Calculator') {
+          // Navigate to the calculator page
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => CalculatorPage()),
+          );
+        } else if (title == 'Stock Price') {
+          // Navigate to the stock price page
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => StockPricePage()),
+          );
+        } else if (title == 'Stock Alert') {
+          // Navigate to the stock alert page
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => StockAlertPage()),
+          );
+        } else if (title == 'Price/Volume') {
 
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => PricePage()),
+          );
+        } else if (title == 'Minerals') {
+
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => MineralPage()),
+          );
+        } else if (title == 'Watch List') {
+
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => WatchListPage()),
+          );
+        } else if (title == 'Stock Graph') {
+
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => StockGraphPage()),
+          );
+        } else if (title == 'Predicted Graph') {
+
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => PredictedGraphPage()),
+          );
+        } else if (title == 'Graph Study') {
+
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => GraphStudyPage()),
+          );
+        } else if (title == 'Contact and Feedback') {
+
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => ContactPage()),
+          );
         }
       },
     );
   }
 
 }
+
+
+

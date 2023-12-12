@@ -66,7 +66,8 @@ class _LoginPageState extends State<LoginPage> {
                 ElevatedButton(
                   onPressed: () async{
                     try {
-                      UserCredential userCredential = await _auth.signInWithEmailAndPassword(
+                      //UserCredential userCredential =
+                      await _auth.signInWithEmailAndPassword(
                         email: _usernameController.text, // Assuming email is used as the username
                         password: _passwordController.text,
                       );
@@ -99,7 +100,7 @@ class _LoginPageState extends State<LoginPage> {
                   },
 
                   style: ElevatedButton.styleFrom(
-                    primary: Colors.black,
+                    backgroundColor: Colors.black,
                   ),
                   child: Text(
                     'Login',
